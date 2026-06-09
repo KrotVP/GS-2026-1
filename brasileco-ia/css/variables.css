@@ -1,0 +1,18 @@
+:root {
+  --bg: #020c1b;
+  --primary: #00d084;
+  --secondary: #ffc107;
+  --text: #ffffff;
+  --border: rgba(255,255,255,0.1);
+  --bg-card: #0b1a2d;
+  --bg-card-active: #020c1b;
+  --border: rgba(255,255,255,0.08);
+  --text-muted: rgba(255,255,255,0.65);
+  --blue: #3b82f6;
+  --green: #00d084;
+  --orange: #f59e0b;
+  --yellow: #facc15;
+  --red: #ef4444;
+  --card-radius: 1rem;
+  --card-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.4);
+}
