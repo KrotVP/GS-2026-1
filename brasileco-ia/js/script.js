@@ -37,9 +37,6 @@ async function buscarCEP() {
   }
 }
 
-/* =========================
-   LOADING (SKELETON)
-========================= */
 function ativarLoading() {
   document.querySelectorAll(".alert-card, #summaryCard, #localInfo")
     .forEach(el => {
@@ -47,18 +44,12 @@ function ativarLoading() {
     });
 }
 
-/* =========================
-   REMOVE SKELETON
-========================= */
 function removerSkeleton() {
   document.querySelectorAll(".skeleton").forEach(el => {
     el.classList.remove("skeleton");
   });
 }
 
-/* =========================
-   PREENCHER DADOS
-========================= */
 function preencherDados(data) {
 
   document.querySelector(".analysis-text").innerText =
@@ -76,9 +67,6 @@ function preencherDados(data) {
     "Qualidade do ar e temperatura moderadas pedem atenção a pessoas sensíveis, com hidratação e evitar esforço físico intenso nos horários mais frios. \n O risco de incêndio está alto, então evite qualquer tipo de queimada ou uso de fogo ao ar livre na região. \nApesar de não haver alerta de desastres naturais, acompanhe atualizações e prepare-se para a queda de temperatura durante a madrugada.";
   
   
-  /* =========================
-     CARDS
-  ========================= */
 
   preencherCard("card1", "Moderado", "Níveis de partículas levemente elevados. Pode causar desconforto respiratório.")
   preencherCard("card2", "Alto", "Vegetação muito seca na região. Evite qualquer tipo de queimada.")
