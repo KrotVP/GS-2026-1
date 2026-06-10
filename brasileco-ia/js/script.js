@@ -20,7 +20,8 @@ async function buscarCEP() {
     if(!document.getElementById("ia-icon").querySelector('i')){
       preencherDados(data);
       removerSkeleton();
-      adicionarAlerta();
+      adicionarAlerta("ia-summary", "ATENÇÃO");
+      adicionarAlerta("analysis-summary", "IBEH:61- MÉDIO");
       adicionarIcone("analysis-icon", "fa-magnifying-glass")
       adicionarIcone("ia-icon" , "fa-microchip")
       adicionarIcone("ar", "fa-wind");
@@ -55,12 +56,10 @@ function preencherDados(data) {
   document.querySelector(".analysis-text").innerText =
     `Monitoramento em raio de 200km a partir das informações:
      
-      CEP: ${data.cep} 
-
       Bairro: ${data.bairro}
-      
+
       Cidade: ${data.localidade} 
-      
+
       Estado: ${data.uf}`;
 
   document.querySelector(".summary-text").innerText =
@@ -74,12 +73,12 @@ function preencherDados(data) {
   preencherCard("card4", "Baixo", "Nenhuma anomalia grave detectada por satélite para enchentes ou deslizamentos.")
 }
 
-function adicionarAlerta(){
-  const divIaSummary = document.getElementById("ia-summary");
+function adicionarAlerta(id,text){
+  const divIaSummary = document.getElementById(id);
   
   const span = document.createElement("span");
   span.className = "badge-alert ms-2";
-  span.textContent = "ATENÇÃO";
+  span.textContent = text;
 
   divIaSummary.appendChild(span);
 
